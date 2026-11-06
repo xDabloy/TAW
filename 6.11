@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+
+<body>
+    <main id="board">
+        <section class="column" id="todo">
+            <h2>Do zrobienia</h2>
+            <article class="card priority-low" data-id="101">
+                <p class="title">Zakupy spozywcze</p>
+                <span class="badge">Dom</span>
+            </article>
+            <article class="card priority-high" data-id="102">
+                <p class="title">Oplacic serwer</p>
+                <span class="badge">Praca</span>
+            </article>
+            <article class="card priority-high" data-id="103">
+                <p class="title">Wyslac raport kwartalny</p>
+                <span class="badge">Praca</span>
+            </article>
+        </section>
+
+        <section class="column" id="in-progress">
+            <h2>W trakcie</h2>
+            <article class="card priority-medium" data-id="104">
+                <p class="title">Refaktoryzacja kodu</p>
+                <span class="badge">Praca</span>
+            </article>
+        </section>
+
+        <footer id="summary">
+            Liczba zadan pilnych: <span id="urgent-count">0</span>
+        </footer>
+    </main>
+    <script>
+        let a = document.querySelector('#in-progress');
+        let b = a.querySelector('h2').textContent = "W trakcie(1)";
+        console.log(b);
+
+        let c = document.querySelectorAll(".priority-high")[0];
+        c.classList.add('border');
+        console.log(c)
+
+        let all = document.querySelectorAll(".card.priority-high .badge");
+        console.log(all)
+
+
+        let pisz = document.querySelector('urgent-count');
+        let h = document.querySelectorAll(".priority-high")[0];
+        for (item of h) {
+            count++
+            console.log(item);
+            pisz.innerText = count;
+        }
+
+
+
+    </script>
+</body>
+
+</html>
